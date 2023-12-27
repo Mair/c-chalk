@@ -8,7 +8,7 @@ static void _chalk_printf_rgb(bool is_background, uint8_t r, uint8_t g, uint8_t 
 
 static void _chalk_printf_rgb(bool is_background, uint8_t r, uint8_t g, uint8_t b, bool with_line, const char *format, va_list list)
 {
-    printf("\e[%d;2;%d;%d;%dm", is_background ? 48 : 28, r, g, b);
+    printf("\e[%d;2;%d;%d;%dm", is_background ? 48 : 38, r, g, b);
     vprintf(format, list);
     printf("\033[0m");
     if (with_line)
